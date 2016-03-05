@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="msg.com.tstaction.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <com.github.fafaldo.fabtoolbar.widget.FABToolbarLayout
+        android:id="@+id/fabtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:showDuration="600"
+        app:hideDuration="300"
+        app:horizontalMargin="30dp"
+        app:verticalMargin="30dp"
+        app:fadeInFraction="0.2"
+        app:fabId="@+id/fabtoolbar_fab"
+        app:containerId="@+id/fabtoolbar_container"
+        app:fabToolbarId="@+id/fabtoolbar_toolbar">
+
+
+
+        <RelativeLayout
+            android:id="@id/fabtoolbar_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@id/fabtoolbar_fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fabSize="normal"
+                app:borderWidth="0dp"
+                android:src="@drawable/ic_done"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@id/fabtoolbar_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:text="Items"
+                android:paddingLeft="10dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+                android:textSize="25dp"
+                android:id="@+id/itemstitle"
+                />
+
+            <View style="@style/Divider"/>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingTop="10dp"
+                android:text="1"
+                android:textSize="25dp"
+                android:id="@+id/itemstitle1"/>
+
+
+            <ImageView
+                android:id="@+id/three"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/okfood"/><!-- Ask designers to make ok icon icon-->
+
+            <ImageView
+                android:id="@+id/four"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/cancelicon"/><!-- Ask designers to make cancel icon-->
+
+        </LinearLayout>
+
+    </com.github.fafaldo.fabtoolbar.widget.FABToolbarLayout>
+</RelativeLayout>
